@@ -115,7 +115,7 @@ class MyClient(discord.Client):
         for channel in channels:
             channel = client.get_channel(channel)
             server = channel.guild
-            print("   Channel ID: {0}\n   Channel name: {1}\n   Server name: {2}\n\n".format(channel, channel.name, server.name))
+            print("   Channel ID: {0}\n   Channel name: {1}\n   Server name: {2}\n\n".format(channel.id, channel.name, server.name))
         if (mode == "auto"):
             await beginAutoBump()
 
