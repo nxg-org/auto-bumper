@@ -7,7 +7,7 @@ shouldRun = True
 
 with open("config.json", "r") as settings:
     configFile = json.load(settings)
-    debug = configFile['debug'] # Prompts debug messages if enabled.
+    debugVal = configFile['debug'] # Prompts debug messages if enabled.
     authorizedUserIDs = configFile['authorizedUserIDs']  # users who can use commands if authorized.
     superUserIDs = configFile['superUserIDs'] # Super users who can add other users.
     p = configFile['prefix']  # prefix if manual operation.
@@ -81,7 +81,8 @@ Your prefix: {p}
 
 
 async def debug(value):
-    print("[DEBUG]: {0}".format(value))
+    if (debugVal):
+        print("[DEBUG]: {0}".format(value))
 
 
 class MyClient(discord.Client):
