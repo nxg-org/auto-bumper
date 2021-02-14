@@ -106,7 +106,6 @@ class MyClient(discord.Client):
         print("Welcome to the auto bumper. You can check your settings in the config file.\n")
         if (mode == "auto"):
             print("This script is in auto mode. The bots have started to send their messages automatically. There is no setup required.")
-            await beginAutoBump()
         elif (mode == "manual"):
             print("This script is in manual mode. The bots are awaiting your commands.\n Do {0}help for a command list.")
         else:
@@ -117,7 +116,8 @@ class MyClient(discord.Client):
             channel = client.get_channel(channel)
             server = channel.guild
             print("   Channel ID: {0}\n   Channel name: {1}\n   Server name: {2}\n\n".format(channel, channel.name, server.name))
-
+        if (mode == "auto"):
+            await beginAutoBump()
 
 client = MyClient()
 client.run(userToken, bot=False)
