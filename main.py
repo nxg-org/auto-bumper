@@ -107,7 +107,9 @@ Your prefix: {p}
 {p}begin -> starts the auto-bumper.
 {p}stop -> stops the auto-bumper.
 {p}add -> adds channels to the target list.
-{p}adduser -> authorizes another user to use this script. REQUIRES SUPERUSER ACCESS.```""")
+{p}del -> removes channels from the target list.
+{p}adduser -> authorizes another user to use this script. REQUIRES SUPERUSER ACCESS.
+{p}deluser -> Removes ID from authorized User list. REQUIRES SUPERUSER ACCESS.```""")
 
 
 
